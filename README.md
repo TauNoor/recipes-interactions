@@ -39,7 +39,6 @@ The piechart shows the portion of ratings in the data we have. It seems to be th
 
 <iframe src="Sauce/bivariate.html" width=800 height=600 frameBorder=0></iframe>
 
-CHANGE
 I decided to find trends by looking at the ratings categorically. In this barchart, we can see that the average calories of a food tends to be lower, the higher the rating. However, the trend isn't consistent throughout as increasing the rating from 1 to 2, shows an increase in average calories which opposes the overall trend. All in all, there is a clear enough pattern to investigate whether or not lower calorie food tends to be rated higher.
 
 ##### Aggregate Statistics: 
@@ -54,5 +53,20 @@ I grouped the dataframe by discrete rating values, and took the means of the dif
 |  4 |        5 |    325.995 |
 
 ## Assessment of Missingness
+Is column `rating` NMAR? After modifying and cleaning the data in our dataframe, it would be reasoable to assume that missingness of column rating is not NMAR (Not Missing At Random) because there doesn't seem to be any reason as to why the user didn't rate the recipe. The only plausible reason for not rating the recipes would be that the users forgot to do so which would make it random because in such a large pool of user data there isn't a specific type of user that would be prone to forgetfulness.
+
+That being said, let's take a step further and check to see if missingness of the data in the column `rating` is dependent on the column `calories` and the missingness of the data in the column `description` is not dependent on the column `recipe age`. We will conduct hypothesis testing (specifically permutation test) to see if there's any association between the two mentioned columns with the **significance threshold 1%**.
+
+**Null hypothesis**: The missingness of column X is not dependent on column Y (i.e the difference in missingness is due to random chance).
+
+**Alternate hypothesis**: The missingness of column X is dependent on column Y (i.e the difference in missingness of column X is associated with column Y).
+
+<iframe src="Sauce/independent.html" width=800 height=600 frameBorder=0></iframe>
+
+In our permutation test, I decided to use the absolute difference in means as my test statistic since the histogram shows that the two distributions' shape look quite similar. Subsequently, I created an array of simulated test statistics to compare with the observed test statistic. The p-value is 0.0, which means it falls below the 1% significance level. Hence, we can reject the null hypothesis. In other words, the missingness of column rating is not due to random chance.
+
+
+
+
 
 ## Hypothesis Testing
