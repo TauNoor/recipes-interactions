@@ -65,8 +65,9 @@ That being said, let's take a step further and check to see if missingness of th
 
 In our permutation test, I decided to use the absolute difference in means as my test statistic since the histogram shows that the two distributions' shape look quite similar. Subsequently, I created an array of simulated test statistics to compare with the observed test statistic. The p-value is 0.0, which means it falls below the 1% significance level. Hence, we can reject the null hypothesis. In other words, the missingness of column rating is not due to random chance.
 
+<iframe src="Sauce/independent.html" width=800 height=600 frameBorder=0></iframe>
 
-
+Given the similarity in the two distributions' shape, we can use absolute difference in means as our test statistic. I carried out a similar implementation as that of the permutation test above. Since the p-value is ~0.028, it is above the 1% significance threshold, which means we cannot reject the null hypothesis. In other words, there is a chance that the missingness of the description is due to random chance.
 
 
 ## Hypothesis Testing
