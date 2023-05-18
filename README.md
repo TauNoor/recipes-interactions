@@ -65,9 +65,26 @@ That being said, let's take a step further and check to see if missingness of th
 
 In our permutation test, I decided to use the absolute difference in means as my test statistic since the histogram shows that the two distributions' shape look quite similar. Subsequently, I created an array of simulated test statistics to compare with the observed test statistic. The p-value is 0.0, which means it falls below the 1% significance level. Hence, we can reject the null hypothesis. In other words, the missingness of column rating is not due to random chance.
 
-<iframe src="Sauce/independent.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="Sauce/dependent.html" width=800 height=600 frameBorder=0></iframe>
 
 Given the similarity in the two distributions' shape, we can use absolute difference in means as our test statistic. I carried out a similar implementation as that of the permutation test above. Since the p-value is ~0.028, it is above the 1% significance threshold, which means we cannot reject the null hypothesis. In other words, there is a chance that the missingness of the description is due to random chance.
 
 
 ## Hypothesis Testing
+After looking at the data thoroughly, I will be testing to see if there is a relationship between the average calories and the rating of recipes. Hence, I will be conducting a permutation test that will look at the average calories of low rating recipes and high rating recipes. 
+
+Low rating recipes will be recipes **ranked 1 or 2**, and high rating recipes will be **ranked 4 or 5**. Since I have binarized the rating into two categories, I will leave out the middle rating 3 because it belongs it's middling value makes it illogical to classify it as either a low or high rating.  
+
+**Question**: Do recipes with a high rating have fewer calories than recipes with a low rating?
+
+**Null Hypothesis**: The recipes with a high rating don't have fewer calories than recipes with a low rating. 
+
+**Alternate Hypothesis**: The recipes with a high rating have fewer calories than recipes with a low rating.
+
+**Significance level**: 1%
+
+Given the similarity of the two distributions and my alternate hypothesis where direction matters, I will use difference in means (low rating mean - high rating mean) as my **test statistic** to find the significance of the data. For the permutation test, I will shuffle the `low` column every loop and calculate the simulated test statistics.
+
+#### Conclusion
+The p-value is 0.0 which is below the 1% significance level. Hence, we can reject the null hypothesis that claimed that high rating recipes don't have fewer calories than low rating recipes. However, we cannot conclusively state that the alternative hypothesis is true. Based on our hypothesis testing, we can only say there is an association between the two variables
+
