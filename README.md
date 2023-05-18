@@ -37,6 +37,7 @@ The piechart shows the portion of ratings in the data we have. It seems to be th
 ##### Bivariate Analysis:
 <iframe src="Sauce/bivariate.html" width=800 height=600 frameBorder=0></iframe>
 
+CHANGE
 I decided to find trends by looking at the ratings categorically. In this barchart, we can see that the average calories of a food tends to be lower, the higher the rating. However, the trend isn't consistent throughout as increasing the rating from 1 to 2, shows an increase in average calories which opposes the overall trend. All in all, there is a clear enough pattern to investigate whether or not lower calorie food tends to be rated higher.
 
 ##### Aggregate Statistics: 
