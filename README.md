@@ -44,6 +44,7 @@ I decided to find trends by looking at the ratings categorically. In this barcha
 
 ##### Aggregate Statistics: 
 I grouped the dataframe by discrete rating values, and took the means of the different columns. Here are the 2 most relevant columns in the group table: 
+
 |    |   rating |   calories |
 |---:|---------:|-----------:|
 |  0 |        1 |    338.375 |
