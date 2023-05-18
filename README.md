@@ -30,11 +30,13 @@ Here are the steps I took in the the data cleaning process:
 With the data cleaning process, I was able to analyze more columns (calories, sugar, protein, etc) to see if there were trends. Hence, I was able to come up with my question that looked to investigate the relationship between calories and ratings. Here are some of the trends I looked at: 
 
 ##### Univariate Analysis:
+
 <iframe src="Sauce/univariate.html" width=800 height=600 frameBorder=0></iframe>
 
 The piechart shows the portion of ratings in the data we have. It seems to be that the vast majority of the data is made up of 5 star ratings (the highest attainable score). Moreover, the lower the rating, the lower the portion within the whole data.
 
 ##### Bivariate Analysis:
+
 <iframe src="Sauce/bivariate.html" width=800 height=600 frameBorder=0></iframe>
 
 CHANGE
